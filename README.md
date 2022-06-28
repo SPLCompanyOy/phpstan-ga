@@ -72,3 +72,11 @@ You can run it in any given directory like this:
 
 `docker run --rm -it -w=/app -v ${PWD}:/app oskarstark/phpstan-ga:latest analyse src/ --level=5`
 
+### Build instructions for M1 Macs
+
+We need to build it a bit differently as Github Actions doesn't support other architectures than amd64, so crossbuild it is then
+
+```
+docker buildx create --use
+docker buildx build --platform linux/amd64 . -t ukkocom/phpstan-ga:latest --push
+```
