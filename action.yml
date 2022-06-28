@@ -12,4 +12,4 @@ name: 'ukkocom-phpstan'
 
 runs:
     using: 'docker'
-    image: 'docker://ukkocom/phpstan-ga:1.6.4'
+    image: 'docker://ukkocom/phpstan-ga:1.7.15'
